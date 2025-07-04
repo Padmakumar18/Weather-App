@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class WeatherScreen extends StatelessWidget {
@@ -63,7 +62,150 @@ class WeatherScreen extends StatelessWidget {
             ),
             // const Placeholder(fallbackHeight: 250),
             const SizedBox(height: 20),
-            const Placeholder(fallbackHeight: 100),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: const Text(
+                "Waether Forecast",
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+            ),
+            const SizedBox(height: 20),
+            // const Placeholder(fallbackHeight: 100),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Card(
+                    elevation: 6,
+                    child: Container(
+                      width: 100,
+                      child: Card(
+                        elevation: 6,
+                        child: Container(
+                          padding: const EdgeInsets.all(8.0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Column(
+                            children: [
+                              const Text(
+                                "03 : 03",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              const Icon(Icons.cloud, size: 25),
+                              const SizedBox(height: 10),
+                              const Text("303.32"),
+                              const SizedBox(height: 10),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Card(
+                    elevation: 6,
+                    child: Container(
+                      width: 100,
+                      child: Card(
+                        elevation: 6,
+                        child: Container(
+                          padding: const EdgeInsets.all(8.0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Column(
+                            children: [
+                              const Text(
+                                "03 : 03",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              const Icon(Icons.cloud, size: 25),
+                              const SizedBox(height: 10),
+                              const Text("303.32"),
+                              const SizedBox(height: 10),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Card(
+                    elevation: 6,
+                    child: Container(
+                      width: 100,
+                      child: Card(
+                        elevation: 6,
+                        child: Container(
+                          padding: const EdgeInsets.all(8.0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Column(
+                            children: [
+                              const Text(
+                                "03 : 03",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              const Icon(Icons.cloud, size: 25),
+                              const SizedBox(height: 10),
+                              const Text("303.32"),
+                              const SizedBox(height: 10),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Card(
+                    elevation: 6,
+                    child: Container(
+                      width: 100,
+                      child: Card(
+                        elevation: 6,
+                        child: Container(
+                          padding: const EdgeInsets.all(8.0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Column(
+                            children: [
+                              const Text(
+                                "03 : 03",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              const Icon(Icons.cloud, size: 25),
+                              const SizedBox(height: 10),
+                              const Text("303.32"),
+                              const SizedBox(height: 10),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: const Text(
+                "Waether Forecast",
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+            ),
             const SizedBox(height: 20),
             const Placeholder(fallbackHeight: 100),
           ],
