@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class WeatherScreen extends StatelessWidget {
@@ -29,17 +31,33 @@ class WeatherScreen extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: Card(
-                child: Column(
-                  children: [
-                    Text(
-                      "300°C",
-                      style: TextStyle(
-                        fontSize: 32,
-                        fontWeight: FontWeight.bold,
+                elevation: 3,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: BackdropFilter(
+                    filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                    child: const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Text(
+                            "300°C",
+                            style: TextStyle(
+                              fontSize: 32,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Icon(Icons.cloud, size: 40),
+                          SizedBox(height: 10),
+                          Text("Rain", style: TextStyle(fontSize: 20)),
+                        ],
                       ),
                     ),
-                    Icon(Icons.cloud, size: 40),
-                  ],
+                  ),
                 ),
               ),
             ),
