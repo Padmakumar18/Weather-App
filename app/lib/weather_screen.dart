@@ -69,134 +69,13 @@ class WeatherScreen extends StatelessWidget {
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
             ),
-            const SizedBox(height: 20),
-            // const Placeholder(fallbackHeight: 100),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  Card(
-                    elevation: 6,
-                    child: Container(
-                      width: 100,
-                      child: Card(
-                        elevation: 6,
-                        child: Container(
-                          padding: const EdgeInsets.all(8.0),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Column(
-                            children: [
-                              const Text(
-                                "03 : 03",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              const Icon(Icons.cloud, size: 25),
-                              const SizedBox(height: 10),
-                              const Text("303.32"),
-                              const SizedBox(height: 10),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 6,
-                    child: Container(
-                      width: 100,
-                      child: Card(
-                        elevation: 6,
-                        child: Container(
-                          padding: const EdgeInsets.all(8.0),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Column(
-                            children: [
-                              const Text(
-                                "03 : 03",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              const Icon(Icons.cloud, size: 25),
-                              const SizedBox(height: 10),
-                              const Text("303.32"),
-                              const SizedBox(height: 10),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 6,
-                    child: Container(
-                      width: 100,
-                      child: Card(
-                        elevation: 6,
-                        child: Container(
-                          padding: const EdgeInsets.all(8.0),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Column(
-                            children: [
-                              const Text(
-                                "03 : 03",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              const Icon(Icons.cloud, size: 25),
-                              const SizedBox(height: 10),
-                              const Text("303.32"),
-                              const SizedBox(height: 10),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Card(
-                    elevation: 6,
-                    child: Container(
-                      width: 100,
-                      child: Card(
-                        elevation: 6,
-                        child: Container(
-                          padding: const EdgeInsets.all(8.0),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Column(
-                            children: [
-                              const Text(
-                                "03 : 03",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              const Icon(Icons.cloud, size: 25),
-                              const SizedBox(height: 10),
-                              const Text("303.32"),
-                              const SizedBox(height: 10),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+            Row(
+              children: [
+                HourlyForeCastItem(),
+                HourlyForeCastItem(),
+                HourlyForeCastItem(),
+                HourlyForeCastItem(),
+              ],
             ),
             const SizedBox(height: 20),
             Align(
@@ -209,6 +88,39 @@ class WeatherScreen extends StatelessWidget {
             const SizedBox(height: 20),
             const Placeholder(fallbackHeight: 100),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class HourlyForeCastItem extends StatelessWidget {
+  const HourlyForeCastItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 6,
+      child: Container(
+        width: 100,
+        child: Card(
+          elevation: 6,
+          child: Container(
+            padding: const EdgeInsets.all(8.0),
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+            child: Column(
+              children: [
+                const Text(
+                  "03 : 03",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                const Icon(Icons.cloud, size: 25),
+                const SizedBox(height: 10),
+                const Text("303.32"),
+                const SizedBox(height: 10),
+              ],
+            ),
+          ),
         ),
       ),
     );
